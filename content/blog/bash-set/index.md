@@ -12,6 +12,7 @@ tags: ["bash","coding","containers","Dockerfile"]
 contributors: ["Sharjeel Aziz"]
 pinned: false
 homepage: true 
+images: ["set_e.png"]
 seo:
   title: "" # custom title (optional)
   description: "" # custom description (recommended)
