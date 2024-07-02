@@ -12,7 +12,7 @@ tags: ["dora","metrics","devops","jenkins","dashboard","flask"]
 contributors: ["Sharjeel Aziz"]
 pinned: false
 homepage: true
-images: ["dora-dashboard.png"]
+images: ["dora-dashboard-og.png"]
 seo:
   title: "" # custom title (optional)
   description: "" # custom description (recommended)
