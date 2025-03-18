@@ -1,13 +1,13 @@
 ---
-title : "Not just any other DevOps blog"
+title : "A DevOps blog"
 description: "foreops_ blog"
-lead: "Useful, easy to understand posts for you."
+lead: "Things we do to keep the lights on."
 date: 2023-09-07T16:33:54+02:00
 lastmod: 2023-09-07T16:33:54+02:00
 draft: false
 seo:
- title: "Not just any other DevOps blog" # custom title (optional)
- description: "Useful, easy to understand posts for you." # custom description (recommended)
+ title: "A DevOps blog" # custom title (optional)
+ description: "Things we do to keep the lights on." # custom description (recommended)
  canonical: "" # custom canonical URL (optional)
  noindex: false # false (default) or true
 ---
