@@ -34,16 +34,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
+      - name: Read Node.js version from package.json
+        id: node-version
+        run: echo "version=$(node -p "require('./package.json').engines.node || '18'")" >> $GITHUB_OUTPUT
+        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: ${{ steps.node-version.outputs.version }}
           cache: 'npm'
+          
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+        
       - name: Install dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+        
       - name: Build production website
         env:
           # For maximum backward compatibility with Hugo modules
@@ -55,6 +63,7 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" 
+            
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
