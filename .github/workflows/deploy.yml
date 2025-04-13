@@ -38,6 +38,15 @@ jobs:
       - name: Read Node.js version from package.json
         id: node-version
         run: echo "version=$(node -p "require('./package.json').engines.node || '18'")" >> $GITHUB_OUTPUT
+      
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          # If you have a specific version requirement, specify it instead of 'latest'
+          # hugo-version: '0.111.3'
+          # If you need the extended version:
+          extended: true
         
       - name: Setup Node.js
         uses: actions/setup-node@v4
